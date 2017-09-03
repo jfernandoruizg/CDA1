@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Avions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Npiloto</th>
+      <th>Apiloto</th>
+      <th>Destino</th>
+      <th>Origen</th>
+      <th>Hsalidao</th>
+      <th>Fsalidao</th>
+      <th>Hllegadad</th>
+      <th>Fllegadad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @avions.each do |avion| %>
+      <tr>
+        <td><%= avion.matricula %></td>
+        <td><%= avion.npiloto %></td>
+        <td><%= avion.apiloto %></td>
+        <td><%= avion.destino %></td>
+        <td><%= avion.origen %></td>
+        <td><%= avion.hsalidao %></td>
+        <td><%= avion.fsalidao %></td>
+        <td><%= avion.hllegadad %></td>
+        <td><%= avion.fllegadad %></td>
+        <td><%= link_to 'Show', avion %></td>
+        <td><%= link_to 'Edit', edit_avion_path(avion) %></td>
+        <td><%= link_to 'Destroy', avion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Avion', new_avion_path %>

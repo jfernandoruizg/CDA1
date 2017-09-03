@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :avions
   devise_for :users
   get 'admin/indexadmin'
   get 'home/indexhome'

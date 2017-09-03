@@ -1,19 +1,15 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <%= render "barradenavegacion" %>
+  <body class="bodyfondologin">
+    <div align="center" class="moverimagen">
+    <img <%= image_tag "iniciosesion.png"%>
+<div class="divlogin">
 
-
-
-<div id="bg"></div>
-
-<form action="">
-<center>
-
-
-
-<h1>Iniciar Sesión</h1>
-<img style="height: 100px;width: 250px;"<%= image_tag "iniciosesion.png"%>
-
-</center>
-</form>
-<hr>
 
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -36,8 +32,13 @@
           <% end -%>
 
           <div class="actions">
-            <%= f.submit "Log in"%>
+            <%= f.submit "Iniciar Sesión"%>
           </div>
         <% end %>
 
         <%= render "devise/shared/links" %>
+
+      </div>
+
+      </div>
+  </body>
